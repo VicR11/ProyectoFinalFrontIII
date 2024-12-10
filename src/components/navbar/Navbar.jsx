@@ -9,7 +9,7 @@ const Navbar = () =>{
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/favorites'>Favorites</Link></li>
                 </div>
-                <li><Link to='/contact' className={styles.contactButton}>Contact</Link></li>
+                <li><Link to='/contact' className={styles.contactButton}>Contact Us</Link></li>
             </ul>
         </nav>
     )
