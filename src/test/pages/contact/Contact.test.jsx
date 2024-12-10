@@ -17,11 +17,11 @@ describe("Test Contact", () => {
       render(<ContactForm />);
     
       // Selección de inputs por su etiqueta asociada (label)
-      const inputName = screen.getByLabelText(/nombre:/i);
+      const inputName = screen.getByLabelText(/name:/i);
       const inputEmail = screen.getByLabelText(/email:/i);
-      const inputPhone = screen.getByLabelText(/telefono:/i);
-      const inputMessage = screen.getByLabelText(/mensaje:/i);
-      const buttonSubmit = screen.getByRole("button", { name: /enviar/i });
+      const inputPhone = screen.getByLabelText(/phone:/i);
+      const inputMessage = screen.getByLabelText(/message:/i);
+      const buttonSubmit = screen.getByRole("button", { name: /send/i });
     
        // Act
       await userEvent.type(inputName, "Ana");
