@@ -1,0 +1,9 @@
+.navbar-container {
+    margin-bottom: 2rem; /* Espacio debajo del Navbar */
+  }
+  
+  .card-container {
+    margin-top: 5rem; /* Asegura que la tarjeta no tenga márgenes adicionales */
+    display: flex;
+    justify-content: center;
+  }

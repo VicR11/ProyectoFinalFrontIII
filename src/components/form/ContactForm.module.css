@@ -1,0 +1,117 @@
+/* Contenedor principal del formulario */
+.form-container {
+    max-width: 600px;
+    margin: 5.5rem auto; /* Centra el formulario */
+    padding: 2rem;
+    background-color: #000; /* Fondo gris */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    gap: 1.5rem; /* Espaciado entre elementos */
+}
+
+/* Título del formulario */
+.form-container h2 {
+    color: #ff6f00; /* Naranja vibrante */
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-transform: uppercase; /* Mayúsculas */
+    font-weight: bold;
+}
+
+.form-container div {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    gap: 0.5rem; /* Espaciado entre el label y el campo */
+}
+
+/* Etiquetas */
+.form-container label {
+    color: #d4d4d4; /* Gris claro */
+    font-size: 1rem;
+    font-weight: bold;
+    display: block; 
+}
+
+/* Campos de entrada */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro */
+    box-sizing: border-box; /* Asegura que padding y borde estén dentro del ancho */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efectos al enfocar */
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #ff6f00; /* Naranja vibrante */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 111, 0, 0.5); /* Resaltado suave */
+}
+
+/* Botón de envío */
+.form-container button {
+    padding: 0.8rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* Texto blanco */
+    background-color: #ff6f00; /* Naranja */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efectos del botón */
+.form-container button:hover {
+    background-color: #e65c00; /* Naranja más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.form-container button:active {
+    background-color: #cc4e00; /* Naranja intenso */
+    transform: translateY(0); /* Restablece la posición */
+}
+
+.success{
+    color: #32c12d;  
+    font-weight: bold;
+    margin: 0;
+   
+}
+
+.error{
+    color: #ff6f00;  
+    font-weight: bold;
+   
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 0.9rem;
+    }
+
+    .form-container button {
+        font-size: 0.9rem;
+    }
+}

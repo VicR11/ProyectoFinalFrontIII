@@ -1,0 +1,114 @@
+/* Contenedor principal */
+.card-container {
+    display: flex; /* Cambiado a flex */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 2rem; /* Espaciado entre tarjetas */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    background-color: #706d6d; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Recorta contenido que sobresalga */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación en hover */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Alinea contenido verticalmente */
+    align-items: center; /* Centra contenido horizontalmente */
+    width: calc(25% - 2rem); /* Ajusta el ancho de las tarjetas */
+    min-width: 250px; /* Ancho mínimo */
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: translateY(-8px); /* Levanta ligeramente la tarjeta */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Contenedor para la imagen con fondo blanco */
+.card img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 25rem; /* Ajusta la altura */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    background-color: #fff; /* Fondo blanco detrás de la imagen */
+    border-bottom: 4px solid #ccc; /* Línea gris */
+    display: block; /* Asegura que no haya espacio extra */
+}
+
+/* Título y descripción */
+.card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0rem 0rem;
+    color: #ff6f00; /* Texto claro */
+    text-align: center;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 0.2rem;
+    color: #d4d4d4; /* Texto gris claro */
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0.2rem; /* Elimina todos los márgenes */
+}
+
+/* Botón */
+.card button {
+    width: calc(100% - 2rem);
+    margin: auto 1rem 1rem;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6f00; /* Naranja */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #e65c00; /* Naranja más oscuro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card-container {
+        justify-content: center; /* Mantiene centrado */
+        gap: 1.5rem; /* Espaciado reducido */
+    }
+
+    .card {
+        width: calc(50% - 2rem); /* Dos tarjetas por fila */
+    }
+
+    .card img {
+        height: 12rem; /* Altura más pequeña para imágenes */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Una tarjeta por fila */
+        padding: 1rem;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        height: 10rem; /* Altura ajustada */
+    }
+}

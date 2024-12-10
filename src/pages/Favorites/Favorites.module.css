@@ -1,0 +1,9 @@
+main{
+    margin-top: 5rem;
+}
+.container-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas salten a la siguiente fila si es necesario */
+    gap: 1rem; /* Espaciado entre tarjetas */
+    justify-content: center; /* Alinea horizontalmente al centro */
+}

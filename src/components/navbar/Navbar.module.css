@@ -1,0 +1,114 @@
+nav {
+    background-color: #000; /* Fondo negro */
+    width: 95%; /* Ancho casi completo */
+    padding: 1.5rem 2rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fijo en la parte superior */
+    top: 0; /* Alineación con el borde superior */
+    left: 0; /* Alineación con el borde izquierdo */
+    z-index: 10; /* Para que quede encima del contenido */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Espaciado entre los grupos */
+    align-items: center;
+    margin: 0; 
+    padding: 0;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a nuevas líneas en pantallas pequeñas */
+}
+
+li {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Grupo para Home y Favorites */
+.left-links {
+    display: flex;
+    gap: 2rem; /* Espaciado entre enlaces */
+    flex-wrap: wrap; /* Permite que los enlaces se acomoden en pantallas pequeñas */
+}
+
+/* Botón Contact alineado a la derecha */
+.contactButton {
+    margin-left: auto; /* Empuja hacia el extremo derecho */
+    background-color: rgb(75, 63, 63); /* Fondo */
+    color: #ff6f00; /* Texto naranja */
+    padding: 0.5rem 1rem; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1.8rem; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.contactButton:hover {
+    background-color: darkred; /* Fondo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+a {
+    text-decoration: none;
+    color: #ff6f00; /* Texto naranja */
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #e7ba76; /* Más claro al pasar el cursor */
+}
+
+a.active {
+    border-bottom: 2px solid #ff6f00; /* Indicador de la página activa */
+}
+
+/* === RESPONSIVIDAD === */
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    nav {
+        width: 100%; /* Ancho completo */
+        padding: 1rem; /* Reduce el espaciado interno */
+    }
+
+    ul {
+        flex-direction: column; /* Coloca los elementos en una columna */
+        gap: 1rem; /* Añade espacio entre los elementos */
+    }
+
+    .left-links {
+        justify-content: center; /* Centra los enlaces */
+        gap: 1.5rem; /* Espaciado reducido */
+    }
+
+    .contactButton {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        align-self: center; /* Centra el botón en la nueva columna */
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    nav {
+        padding: 0.8rem; /* Menor espaciado */
+    }
+
+    li {
+        font-size: 1.5rem; /* Tamaño de texto reducido */
+    }
+
+    .contactButton {
+        width: 100%; /* Botón ocupa todo el ancho */
+        text-align: center; /* Centra el texto */
+        font-size: 1.6rem; /* Tamaño de texto más pequeño */
+    }
+
+    ul {
+        gap: 0.5rem; /* Espaciado reducido */
+    }
+
+    .left-links {
+        gap: 1rem; /* Espaciado aún más reducido */
+    }
+}
+

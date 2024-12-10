@@ -1,0 +1,131 @@
+/* Contenedor principal de tarjetas */
+.card-container {
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    max-width: 15rem;
+    height: auto;
+    text-align: center; /* Asegura que todo el contenido dentro de la tarjeta esté centrado horizontalmente */
+}
+
+.card-container:hover {
+    transform: translateY(-10px); /* Efecto de desplazamiento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efecto de sombra más pronunciado */
+}
+
+/* Imagen del personaje */
+.card-container img {
+    width: 15rem;
+    height: 22rem;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card-container img:hover {
+    transform: scale(1.1); /* Efecto de zoom en la imagen */
+}
+
+/* Títulos y descripciones */
+.card-container h2,
+.card-container h3{
+    margin: 0;
+    padding: 0;
+    color: #ff6f00;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container p {
+    margin: 0.5rem 0;
+    color: #706d6d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor de atributos */
+.card-container > div {
+    display: flex;
+    flex-direction: column; /* Cambiado para asegurar que los elementos se apilen correctamente */
+    align-items: center; /* Alinea todos los elementos al centro */
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Botón */
+.link {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6f00;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: #e7ba76;
+}
+
+/* Responsividad para tablets */
+@media (max-width: 768px) {
+    .card-container {
+        max-width: 280px;
+    }
+
+    .card-container img {
+        height: 15rem;
+    }
+
+    .card-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .card-container p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividad para móviles */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 1rem;
+    }
+
+    .card-container img {
+        height: 12rem;
+    }
+
+    .card-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-container p {
+        font-size: 0.8rem;
+    }
+
+    .link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
